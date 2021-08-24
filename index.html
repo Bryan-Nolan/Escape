@@ -9,47 +9,69 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
+    
 
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <title>Escape</title>
 </head>
 
 <body>
 
     <!--Header for Game and Level Number-->
-    <Header>
-        <h1>ESCAPE</h1>
-        <h2><span id="level"> Level 1</span></h2>
-    </Header>
-
-    <!--Game Input Dispaly and Results Display-->
-    <div class="gameArea">
-        <div class="dispalyArea">
-            <span id="displayInput">0000</span>
-            <span id="dispalyResult">CODE</span>
+    <div class="game">
+        <div class="header">
+            <h1>ESCAPE</h1>
+            <h2><span id="level"> Level 1</span></h2>
         </div>
 
-        <!--Keypad-->
+        <!--Game Input Dispaly and Results Display-->
+        <div class="gameArea">
+            <div class="dispalyArea">
+                <span id="displayInput">0000</span>
+                <span id="dispalyResult">CODE</span>
+            </div>
 
-        <div class="keypad">
-            <div class="inputKey">0</div>
-            <div class="inputKey">1/div>
+            <!--Keypad-->
+
+            <div class="keypad">
+                <div class="inputKey">1</div>
                 <div class="inputKey">2</div>
-                <div class="inputKey">3</div>
+                <div class="inputKey">3</div><br>
                 <div class="inputKey">4</div>
                 <div class="inputKey">5</div>
-                <div class="inputKey">6</div>
+                <div class="inputKey">6</div><br>
                 <div class="inputKey">7</div>
                 <div class="inputKey">8</div>
-                <div class="inputKey">9</div>
-                <div class="inputKey">backspace</div>
-                <div class="inputKey">enter</div>
+                <div class="inputKey">9</div><br>
+                <div class="inputKey material-icons">backspace</div>
+                <div class="inputKey">0</div>
+                <div class="inputKey material-icons">done</div>
             </div>
 
             <!--Old Guesses Diplay and Results-->
             <div class="oldGuessDispaly">
                 <ol>
                     <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                                       
                 </ol>
             </div>
 
@@ -59,6 +81,7 @@
             <button data-type="submit" class="hint">HINT</button>
 
         </div>
+    </div>
 
 
 

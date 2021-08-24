@@ -1,3 +1,87 @@
-background-color{
-    color: aqua;
+.game {
+    border-radius: 10px;
+    padding: 5px;
+    background: black;
+    border: 1px solid #353b51;
+    width: 90%;
+    margin: auto;
 }
+
+.game h1 {
+    color: red;
+    text-align: center;
+    margin: 10px auto;
+    font-size: 200%;
+}
+
+.game h2 {
+    color: lightgreen;
+    margin: 10px auto;
+    text-align: center;
+}
+
+#displayInput {
+    color: red;
+    border-radius: 10px;
+    padding: 5px;
+    background: blueviolet;
+    border: 1px solid #353b51;
+    width: 90%;
+    text-align: right;
+    margin: auto;
+    font-size: 50px;
+
+}
+
+#dispalyResult {
+    color: red;
+    border-radius: 10px;
+    padding: 5px;
+    background: blueviolet;
+    border: 1px solid #353b51;
+    width: 90%;
+    text-align: right;
+    margin: auto;
+    font-size: 50px;
+
+}
+
+
+
+
+
+.keypad {
+    display: inline-block;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 28px;
+    background: #d9deff;
+    border: 1px solid #353b5e;
+    width: 60%;
+} 
+
+.inputKey {
+    width: 50px;
+    height: 50px;
+    margin: 2px;
+    background: rgba(0, 0, 0, 0.15);
+    box-shadow: 3px 3px grey;
+    color: #363b5e;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .oldGuessDispaly {
+    display: inline-block;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 10px;
+    background: #d9deff;
+    border: 1px solid #353b5e;
+    width: 30%;
+
+  }
