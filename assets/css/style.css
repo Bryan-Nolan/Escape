@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 7seg;
+    src: url(../fonts/7Segment.ttf);
+      }
+
 .game {
     border-radius: 10px;
     padding: 5px;
@@ -9,6 +14,7 @@
 }
 
 .game h1 {
+    font-family: 7_segment;
     color: red;
     text-align: center;
     margin: 10px auto;
@@ -21,39 +27,28 @@
     text-align: center;
 }
 
-.displayArea span  {
+input {
+    font-family: 7_segment-webfont;
+    color: red;
+    border-radius: 10px;
+    padding: 5px;
+    background: blueviolet;
+    border: 1px solid #353b51;
     width: 45%;
-}
-
-#displayInput {
-    color: red;
-    border-radius: 10px;
-    padding: 5px;
-    background: blueviolet;
-    border: 1px solid #353b51;
-    width: 90%;
     text-align: right;
-    margin: auto;
+    margin: 10px auto;
     font-size: 50px;
-
 }
 
-#dispalyResult {
-    color: red;
-    border-radius: 10px;
-    padding: 5px;
-    background: blueviolet;
-    border: 1px solid #353b51;
-    width: 90%;
-    text-align: right;
-    margin: auto;
-    font-size: 50px;
-
+ol {
+    display: block;
+    list-style-type: decimal;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 15px;
 }
-
-
-
-
 
 .keypad {
     display: inline-block;
@@ -82,9 +77,10 @@
   
   .oldGuessDispaly {
     display: inline-block;
+    position: absolute;
     border-radius: 10px;
     padding: 5px;
-    font-size: 10px;
+    font-size: 12px;
     background: #d9deff;
     border: 1px solid #353b5e;
     width: 30%;
