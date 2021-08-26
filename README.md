@@ -7,16 +7,17 @@
 ## The Rules
 
     1. You must only enter 4 digits and click check mark
-    2. You will be show in the adjecent display box which digits are right and if in corecet place.
+    2. You will be show in the adjacent display box which digits are right and if in correct place.
     3. For a correct digit in correct place you will get a O
     4. For a correct digit in the wrong place you will get a X
-    5. When you click HINT you will recieve the next correct digit. eg if you were correct on digit 1 and 2 you will recieve digit 3 in display box in different color to help you.
+    5. When you click HINT you will receive the next correct digit. e.g. if you were correct on digit 1 and 2 you will receive digit 3 in display box in different colour to help you.
     6. Asking for HINT loses 3 guesses so when you have only 2 guesses left you will be unable to click. 
-    7. The amount of guesses for each level are as follows.
+    7. The number of guesses for each level are as follows.
         1. Level 1 - 20 guesses
         2. Level 2 - 15 guesses
         3. Level 3 - 10 guesses
-    8. If all guesses are used the game restarts at level 1. 
+    8. If all guesses are used the game restarts at level 1.
+ 
         
 
 

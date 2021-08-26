@@ -1,4 +1,4 @@
-/ Wait for the DOM to finish loading before running the game
+// Wait for the DOM to finish loading before running the game
 // Get the button elements and add event listeners to them
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -6,14 +6,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "submit") {
-                checkAnswer();
+            if (this.getAttribute("class") === "story") {
+                displayStory ();
+            } else if (this.getAttribute ("class") === "rules") {
+                displayRules();
             } else {
-                let gameType = this.getAttribute("data-type");
-                runGame(gameType);
+                let gameLevel = 1;
+                runGame (gameLevel);
             }
         });
     }
+
+    runGame(gameLevel = 1);
+
+});
 
 /**
  * The main game "loop", called when the script is first loaded
