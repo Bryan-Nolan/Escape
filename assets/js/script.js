@@ -16,65 +16,78 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+    let guess = 0;
 
     document.getElementsByClassName('inputKey')[0].addEventListener("click", function (event) {
         var keyPress = 1;
-        displayGuess(keyPress);
+        guess++;
+        displayGuess(keyPress, guess);
     });
 
     document.getElementsByClassName('inputKey')[1].addEventListener("click", function (event) {
         var keyPress = 2;
-        displayGuess(keyPress);
+        guess++;
+        displayGuess(keyPress, guess);
     });
 
     document.getElementsByClassName('inputKey')[2].addEventListener("click", function (event) {
         var keyPress = 3;
-        displayGuess(keyPress);
+        guess++;
+        displayGuess(keyPress, guess);
     });
 
     document.getElementsByClassName('inputKey')[3].addEventListener("click", function (event) {
         var keyPress = 4;
-        displayGuess(keyPress);
+        guess++;
+        displayGuess(keyPress, guess);
     });
 
     document.getElementsByClassName('inputKey')[4].addEventListener("click", function (event) {
         var keyPress = 5;
-        displayGuess(keyPress);
+        guess++;
+        displayGuess(keyPress, guess);
     });
 
     document.getElementsByClassName('inputKey')[5].addEventListener("click", function (event) {
         var keyPress = 6;
-        displayGuess(keyPress);
+        guess++;
+        displayGuess(keyPress, guess);
     });
 
     document.getElementsByClassName('inputKey')[6].addEventListener("click", function (event) {
         var keyPress = 7;
-        displayGuess(keyPress);
+        guess++;
+        displayGuess(keyPress, guess);
     });
 
     document.getElementsByClassName('inputKey')[7].addEventListener("click", function (event) {
         var keyPress = 8;
-        displayGuess(keyPress);
+        guess++;
+        displayGuess(keyPress, guess);
     });
 
     document.getElementsByClassName('inputKey')[8].addEventListener("click", function (event) {
         var keyPress = 9;
-        displayGuess(keyPress);
+        guess++;
+        displayGuess(keyPress, guess);
     });
 
     document.getElementsByClassName('inputKey')[9].addEventListener("click", function (event) {
         var keyPress = 10;
-        displayGuess(keyPress);
+        guess++;
+        displayGuess(keyPress, guess);
     });
 
     document.getElementsByClassName('inputKey')[10].addEventListener("click", function (event) {
         var keyPress = 0;
-        displayGuess(keyPress);
+        guess++;
+        displayGuess(keyPress, guess);
     });
 
     document.getElementsByClassName('inputKey')[11].addEventListener("click", function (event) {
         var keyPress = 12;
-        displayGuess(keyPress);
+        guess++;
+        displayGuess(keyPress, guess);
     });
 
 
@@ -86,9 +99,23 @@ document.addEventListener("DOMContentLoaded", function () {
  * Enters Digits into input box as pressed on the keypad
  */
 
- function displayGuess(keyPress) {
-    guess = 0;
-    guess += keyPress;
-    document.getElementById("displayInput").value = guess;
+function displayGuess(keyPress, guess) {
 
+
+
+    if (guess == 1) {
+        guess1 = keyPress;
+        document.getElementById("input1").value = guess1;
+    } else if (guess == 2) {
+        guess2 = keyPress;
+        document.getElementById("input2").value = guess2;
+    } else if (guess == 3) {
+        guess3 = keyPress;
+        document.getElementById("input3").value = guess3;
+    } else if (guess == 4) {
+        guess4 = keyPress;
+        document.getElementById("input4").value = guess4;
+    } else {
+        alert(` Too mant numbers`);
+    }
 }

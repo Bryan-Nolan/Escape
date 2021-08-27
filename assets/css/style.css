@@ -34,10 +34,16 @@ input {
     padding: 5px;
     background: blueviolet;
     border: 1px solid #353b51;
-    width: 45%;
     text-align: right;
     margin: 10px auto;
     font-size: 50px;
+    width: 45%;
+}
+
+.displayInput {
+    width: 35px;
+    padding: 0;
+    text-align: center;
 }
 
 ol {
@@ -95,4 +101,8 @@ ol {
     border: 1px transparent;
     border-radius: 10px;
     display:inline-block;
+}
+
+.material-icons {
+    font-size: 28px;
 }
