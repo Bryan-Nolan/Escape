@@ -134,21 +134,12 @@ function displayGuess(keyPress, guess) {
     }
 }
 
-function checkGuess(num1, num2, num3, num4, guess1, guess2, guess3, guess4, guessNumber) {
+/**
+ * When next guess is being entered previos guess and resuly will be stored in ordered list
+ */
 
-    if (num1 == guess1 ) {
-        document.getElementById("displayResult").value = O;
-    } else if (num2 == guess2) {
-        document.getElementById("displayResult").value = O;
-    } else if (num3 == guess3) {
-        document.getElementById("displayResult").value = O;
-    } else if (num4 == guess4) {
-        document.getElementById("displayResult").value = O;
-    } else {
-        alert(` No matches`)
-    }
+ function displayOldGuess()
 
-}
 
 function resetDispaly () {
 
