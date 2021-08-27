@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded", function() {
     for (let button of buttons) {
         button.addEventListener("click", function() {
             if (this.getAttribute("class") === "story") {
-                displayStory ();
-            } else if (this.getAttribute ("class") === "rules") {
-                displayRules();
+                alert(`Story Key Pressed !`);
+            } else if (this.getAttribute("class") === "rules") {
+                alert(`Rules Key Pressed !`);
             } else {
                 let gameLevel = 1;
                 runGame (gameLevel);
@@ -17,12 +17,11 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    document.getElementsByClassName('inputKey')[0]
-        .addEventListener('click', function() {
-            alert(`Key Pressed !`)
-        })
+    document.getElementsByClassName('inputKey').addEventListener("keydown", function(event) {
+            alert(`Key Pressed !`);
+        });
 
-    runGame(gameLevel = 1);
+ //   runGame(gameLevel = 1);
 
 });
 
@@ -49,8 +48,7 @@ function displayRules ()
  * Pop up box which will display story of the game
  */
 
- function displayStory ()
-
+ function displayStory () 
 
 /**
  * Enters Digits into inpox as pressed on the keypad
