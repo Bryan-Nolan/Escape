@@ -17,6 +17,11 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+    document.getElementsByClassName('inputKey')[0]
+        .addEventListener('click', function() {
+            alert(`Key Pressed !`)
+        })
+
     runGame(gameLevel = 1);
 
 });
@@ -26,7 +31,13 @@ document.addEventListener("DOMContentLoaded", function() {
  * and after the user's answer has been processed
  */
 
-function runGame ()
+function runGame () {
+
+    let num1 = Math.floor(Math.random() * 10);
+    let num2 = Math.floor(Math.random() * 10);
+    let num3 = Math.floor(Math.random() * 10);
+    let num4 = Math.floor(Math.random() * 10);
+}
 
 /**
  * Pop up box which will display rules of the game
