@@ -16,7 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+
     let guess = 0;
+    let guessNumber = 0;
 
     document.getElementsByClassName('inputKey')[0].addEventListener("click", function (event) {
         var keyPress = 1;
@@ -73,9 +75,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     document.getElementsByClassName('inputKey')[9].addEventListener("click", function (event) {
-        var keyPress = 10;
-        guess++;
-        displayGuess(keyPress, guess);
+        guess=0;
+        resetDispaly ();
     });
 
     document.getElementsByClassName('inputKey')[10].addEventListener("click", function (event) {
@@ -85,27 +86,40 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     document.getElementsByClassName('inputKey')[11].addEventListener("click", function (event) {
-        var keyPress = 12;
-        guess++;
-        displayGuess(keyPress, guess);
+        guessNumber++;
+        checkGuess(guessNumber);
     });
 
-
-    //   runGame(gameLevel = 1);
+    runGame();
 
 });
 
 /**
- * Enters Digits into input box as pressed on the keypad
+ * The main game "loop", called when the script is first loaded
+ * to generate the 4 random numbers for the game to commence 
+ */
+
+ function runGame() {
+
+    let num1 = Math.floor(Math.random() * 10);
+    let num2 = Math.floor(Math.random() * 10);
+    let num3 = Math.floor(Math.random() * 10);
+    let num4 = Math.floor(Math.random() * 10);
+
+    checkGuess (num1, num2, num3, num4)
+
+}
+
+/**
+ * Enters Digits into input boxes as pressed on the keypad
  */
 
 function displayGuess(keyPress, guess) {
 
-
-
     if (guess == 1) {
         guess1 = keyPress;
         document.getElementById("input1").value = guess1;
+        checkGuess(guess1);
     } else if (guess == 2) {
         guess2 = keyPress;
         document.getElementById("input2").value = guess2;
@@ -116,6 +130,30 @@ function displayGuess(keyPress, guess) {
         guess4 = keyPress;
         document.getElementById("input4").value = guess4;
     } else {
-        alert(` Too mant numbers`);
+        alert(`Too many numbers click restart or done`);
     }
+}
+
+function checkGuess(num1, num2, num3, num4, guess1, guess2, guess3, guess4, guessNumber) {
+
+    if (num1 == guess1 ) {
+        document.getElementById("displayResult").value = O;
+    } else if (num2 == guess2) {
+        document.getElementById("displayResult").value = O;
+    } else if (num3 == guess3) {
+        document.getElementById("displayResult").value = O;
+    } else if (num4 == guess4) {
+        document.getElementById("displayResult").value = O;
+    } else {
+        alert(` No matches`)
+    }
+
+}
+
+function resetDispaly () {
+
+    document.getElementById("input1").value = 0;
+    document.getElementById("input2").value = 0;
+    document.getElementById("input3").value = 0;
+    document.getElementById("input4").value = 0;
 }
