@@ -19,12 +19,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let digitGuess = 0;
     let tryNumber = 0;
+    let triesLeft = 20;
+    let level = "Level 1";
     let num1 = Math.floor(Math.random() * 10);
     let num2 = Math.floor(Math.random() * 10);
     let num3 = Math.floor(Math.random() * 10);
     let num4 = Math.floor(Math.random() * 10);
 
+    document.getElementById('level').innerHTML = level;
+
+    document.getElementById('triesLeft').innerHTML = triesLeft;
+
     alert(`Numbers: ` +num1+num2+num3+num4);
+
+/**
+ * Event Listeners track what keys are clicked and gives required action.  
+ */
+
 
     document.getElementsByClassName('inputKey')[0].addEventListener("click", function (event) {
         var keyPress = 1;
@@ -94,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementsByClassName('inputKey')[11].addEventListener("click", function (event) {
         tryNumber++;
         digitGuess= 0;
-        checkGuess(num1, num2, num3, num4, digitGuess1, digitGuess2, digitGuess3, digitGuess4, tryNumber, digitGuess);
+        checkGuess(num1, num2, num3, num4, digitGuess1, digitGuess2, digitGuess3, digitGuess4, tryNumber, digitGuess, triesLeft);
     });    
 
 });
@@ -125,69 +136,67 @@ function displayGuess(keyPress, digitGuess) {
 
 /**
  * Compares guessDigits with random numbers generated and stored in num variable.  
- * It displays output O for correct digit in correct place
+ * It displays output C for correct digit in correct place
  * It diplays X for correct digit wron place
- * It leaves blank if incorrect digit
+ * It displays B for incorrect digit
  * Each display is under the corresponding digit
- *
  */
 
-function checkGuess(num1, num2, num3, num4, digitGuess1, digitGuess2, digitGuess3, digitGuess4, tryNumber, digitGuess) {
+function checkGuess(num1, num2, num3, num4, digitGuess1, digitGuess2, digitGuess3, digitGuess4, tryNumber, digitGuess, triesLeft) {
 
 
     resetResultDisplay ();
     
     if (num1 == digitGuess1 ) {
         document.getElementById("result1").value = "C";
-        result1 = "C";
+        result1 = "C ";
     } else if ( num1 == digitGuess2 || num1 == digitGuess3 || num1 == digitGuess4) {
         document.getElementById("result1").value = "X";
-        result1 = "X";
+        result1 = "X ";
     } else {
         document.getElementById("result1").value = "B";
-        result1 = "B";
+        result1 = "B ";
     }
     
     if (num2 == digitGuess2) {
         document.getElementById("result2").value = "C";
-        result2 = "C";
+        result2 = "C ";
     } else if ( num2 == digitGuess1 || num2 == digitGuess3 || num2 == digitGuess4) {
         document.getElementById("result2").value = "X";
-        result2 = "X";
+        result2 = "X ";
     } else {
         document.getElementById("result2").value = "B";
-        result2 = "B";
+        result2 = "B ";
     }
     
     if (num3 == digitGuess3) {
         document.getElementById("result3").value = "C";
-        result3 = "C";
+        result3 = "C ";
     } else if ( num3 == digitGuess1 || num3 == digitGuess2 || num3 == digitGuess4) {
         document.getElementById("result3").value = "X";
-        result3 = "X";
+        result3 = "X ";
     } else {
         document.getElementById("result3").value = "B";
-        result3 = "B";
+        result3 = "B ";
     }
     
     if (num4 == digitGuess4) {
         document.getElementById("result4").value = "C";
-        result4 = "C";
+        result4 = "C ";
     } else if ( num4 == digitGuess1 || num4 == digitGuess2 || num4 == digitGuess3) {
         document.getElementById("result4").value = "X";
-        result4 = "X";
+        result4 = "X ";
     } else {
         document.getElementById("result4").value = "B";
-        result4 = "B";
+        result4 = "B ";
     }
     
-// alert(`Guess: `+digitGuess1+digitGuess2+digitGuess3+digitGuess4+` Result: `+result1+result2+result3+result4);
-    displayHistroy (digitGuess1, digitGuess2, digitGuess3, digitGuess4, result1, result2, result3, result4, tryNumber);
+    displayHistroy (digitGuess1, digitGuess2, digitGuess3, digitGuess4, result1, result2, result3, result4, triesLeft);
+
 }
 
-
 /**
- * Resests Display back to 0's after reset button pressed
+ * Resets Display back to 0's after reset button pressed
  */
 
 function resetDisplay () {
@@ -198,6 +207,10 @@ function resetDisplay () {
     document.getElementById("input4").value = 0;
 }
 
+/**
+ * Resets Display back to blanks when called
+ */
+
 function resetResultDisplay () {
 
     document.getElementById("result1").value = " ";
@@ -205,13 +218,18 @@ function resetResultDisplay () {
     document.getElementById("result3").value = " ";
     document.getElementById("result4").value = " ";
 }
-function displayHistroy (digitGuess1, digitGuess2, digitGuess3, digitGuess4, result1, result2, result3, result4, tryNumber) {
+
+/**
+ * Displays previous guesses in list at side of keypad
+ */
+
+function displayHistroy (digitGuess1, digitGuess2, digitGuess3, digitGuess4, result1, result2, result3, result4, triesLeft) {
 
     var ol = document. getElementById("list");
     var li = document. createElement("li");
     li. appendChild(document. createTextNode( +digitGuess1+result1+digitGuess2+result2+digitGuess3+result3+digitGuess4+result4));
     ol. appendChild(li);
 
-    alert(`displayHistroy Guess: `+digitGuess1+digitGuess2+digitGuess3+digitGuess4+` Result: `+result1+result2+result3+result4+` Tries: `+tryNumber);
-    
+
+    document.getElementById('triesLeft').innerHTML = triesLeft;
 }
