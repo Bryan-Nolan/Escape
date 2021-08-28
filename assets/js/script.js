@@ -26,86 +26,86 @@ document.addEventListener("DOMContentLoaded", function () {
     let num3 = Math.floor(Math.random() * 10);
     let num4 = Math.floor(Math.random() * 10);
 
-    document.getElementById('level').innerHTML = level;
+    document.getElementById("level").innerHTML = level;
 
-    document.getElementById('triesLeft').innerHTML = triesLeft;
+    document.getElementById("triesLeft").innerHTML = triesLeft;
 
     alert(`Numbers: ` +num1+num2+num3+num4);
 
 /**
- * Event Listeners track what keys are clicked and gives required action.  
+ * Event Listeners track what keys are clicked and gives required action
  */
 
 
-    document.getElementsByClassName('inputKey')[0].addEventListener("click", function (event) {
+    document.getElementsByClassName("inputKey")[0].addEventListener("click", function (event) {
         var keyPress = 1;
         digitGuess++;
         displayGuess(keyPress, digitGuess);
     });
 
-    document.getElementsByClassName('inputKey')[1].addEventListener("click", function (event) {
+    document.getElementsByClassName("inputKey")[1].addEventListener("click", function (event) {
         var keyPress = 2;
         digitGuess++;
         displayGuess(keyPress, digitGuess);
     });
 
-    document.getElementsByClassName('inputKey')[2].addEventListener("click", function (event) {
+    document.getElementsByClassName("inputKey")[2].addEventListener("click", function (event) {
         var keyPress = 3;
         digitGuess++;
         displayGuess(keyPress, digitGuess);
     });
 
-    document.getElementsByClassName('inputKey')[3].addEventListener("click", function (event) {
+    document.getElementsByClassName("inputKey")[3].addEventListener("click", function (event) {
         var keyPress = 4;
         digitGuess++;
         displayGuess(keyPress, digitGuess);
     });
 
-    document.getElementsByClassName('inputKey')[4].addEventListener("click", function (event) {
+    document.getElementsByClassName("inputKey")[4].addEventListener("click", function (event) {
         var keyPress = 5;
         digitGuess++;
         displayGuess(keyPress, digitGuess);
     });
 
-    document.getElementsByClassName('inputKey')[5].addEventListener("click", function (event) {
+    document.getElementsByClassName("inputKey")[5].addEventListener("click", function (event) {
         var keyPress = 6;
         digitGuess++;
         displayGuess(keyPress, digitGuess);
     });
 
-    document.getElementsByClassName('inputKey')[6].addEventListener("click", function (event) {
+    document.getElementsByClassName("inputKey")[6].addEventListener("click", function (event) {
         var keyPress = 7;
         digitGuess++;
         displayGuess(keyPress, digitGuess);
     });
 
-    document.getElementsByClassName('inputKey')[7].addEventListener("click", function (event) {
+    document.getElementsByClassName("inputKey")[7].addEventListener("click", function (event) {
         var keyPress = 8;
         digitGuess++;
         displayGuess(keyPress, digitGuess);
     });
 
-    document.getElementsByClassName('inputKey')[8].addEventListener("click", function (event) {
+    document.getElementsByClassName("inputKey")[8].addEventListener("click", function (event) {
         var keyPress = 9;
         digitGuess++;
         displayGuess(keyPress, digitGuess);
     });
 
-    document.getElementsByClassName('inputKey')[9].addEventListener("click", function (event) {
+    document.getElementsByClassName("inputKey")[9].addEventListener("click", function (event) {
         digitGuess = 0;
         resetDisplay();
     });
 
-    document.getElementsByClassName('inputKey')[10].addEventListener("click", function (event) {
+    document.getElementsByClassName("inputKey")[10].addEventListener("click", function (event) {
         var keyPress = 0;
         digitGuess++;
         displayGuess(keyPress, digitGuess);
     });    
 
-    document.getElementsByClassName('inputKey')[11].addEventListener("click", function (event) {
+    document.getElementsByClassName("inputKey")[11].addEventListener("click", function (event) {
         tryNumber++;
         digitGuess= 0;
-        checkGuess(num1, num2, num3, num4, digitGuess1, digitGuess2, digitGuess3, digitGuess4, tryNumber, digitGuess, triesLeft);
+        checkGuess(num1, num2, num3, num4, digitGuess1, digitGuess2, digitGuess3, digitGuess4, tryNumber, digitGuess, triesLeft, level);
     });    
 
 });
@@ -190,9 +190,7 @@ function checkGuess(num1, num2, num3, num4, digitGuess1, digitGuess2, digitGuess
         document.getElementById("result4").value = "B";
         result4 = "B ";
     }
-    
-    displayHistroy (digitGuess1, digitGuess2, digitGuess3, digitGuess4, result1, result2, result3, result4, triesLeft);
-
+    displayHistroy (digitGuess1, digitGuess2, digitGuess3, digitGuess4, result1, result2, result3, result4, tryNumber, triesLeft);
 }
 
 /**
@@ -223,13 +221,29 @@ function resetResultDisplay () {
  * Displays previous guesses in list at side of keypad
  */
 
-function displayHistroy (digitGuess1, digitGuess2, digitGuess3, digitGuess4, result1, result2, result3, result4, triesLeft) {
+function displayHistroy (digitGuess1, digitGuess2, digitGuess3, digitGuess4, result1, result2, result3, result4, tryNumber, triesLeft) {
 
     var ol = document. getElementById("list");
     var li = document. createElement("li");
     li. appendChild(document. createTextNode( +digitGuess1+result1+digitGuess2+result2+digitGuess3+result3+digitGuess4+result4));
     ol. appendChild(li);
 
+    triesLeft = triesLeft-tryNumber;
+    alert("Tries Left: " +triesLeft+" tryNumber :" +tryNumber);
+    alert("Results: "+result1+result2+result3+result4);
 
-    document.getElementById('triesLeft').innerHTML = triesLeft;
+    if (result1 == "C " && result2 == "C " && result3 == "C " && result4 == "C ") {
+            alert("Well done");
+
+    }
+    else {
+
+    }
+    
+    
+}
+
+function levelUP () {
+
+
 }

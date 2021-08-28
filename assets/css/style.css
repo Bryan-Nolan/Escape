@@ -1,7 +1,7 @@
 @font-face {
     font-family: 7seg;
     src: url(../fonts/7Segment.ttf);
-      }
+}
 
 .game {
     border-radius: 10px;
@@ -44,7 +44,7 @@
 }
 
 input {
-    font-family: 7_segment-webfont;
+    font-family: 7seg;
     color: red;
     border-radius: 10px;
     padding: 5px;
@@ -133,7 +133,6 @@ ol {
     border-radius: 10px;
     display:inline-flex;
     text-align: center;
-    vertical-align: auto;
 }
 
 .material-icons {
