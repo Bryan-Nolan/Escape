@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- font awesome and google fonts -->
-   
+
     <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Escape</title>
@@ -18,25 +17,29 @@
 <body>
 
     <!--Header for Game and Level Number-->
+
     <div class="game">
         <div class="header">
             <h1>ESCAPE</h1>
-            <h2><span id="level"> Level 1</span></h2>
+            <span id="levelDispaly">
+                <p id="level" value="Level 1">Level 1</p>
+                <p id="triesLeft">Tries Left</p>
+            </span>
         </div>
 
         <!--Game Input Dispaly and Results Display-->
         <div class="gameArea">
             <div class="displayGuessArea">
-                <input type="text" readonly class="displayInput" id="input1" value = "0">
-                <input type="text" readonly class="displayInput" id="input2" value = "0">
-                <input type="text" readonly class="displayInput" id="input3" value = "0">
-                <input type="text" readonly class="displayInput" id="input4" value = "0">                
+                <input type="text" readonly class="displayInput" id="input1" value="0">
+                <input type="text" readonly class="displayInput" id="input2" value="0">
+                <input type="text" readonly class="displayInput" id="input3" value="0">
+                <input type="text" readonly class="displayInput" id="input4" value="0">
             </div>
-            <div class= "displayResultArea">
-                <input type="text" readonly class="displayResult" id="result1" value = " ">
-                <input type="text" readonly class="displayResult" id="result2" value = " ">
-                <input type="text" readonly class="displayResult" id="result3" value = " ">
-                <input type="text" readonly class="displayResult" id="result4" value = " ">                
+            <div class="displayResultArea">
+                <input type="text" readonly class="displayResult" id="result1" value=" ">
+                <input type="text" readonly class="displayResult" id="result2" value=" ">
+                <input type="text" readonly class="displayResult" id="result3" value=" ">
+                <input type="text" readonly class="displayResult" id="result4" value=" ">
             </div>
 
             <!--Keypad-->
@@ -58,27 +61,8 @@
 
             <!--Old Guesses Diplay and Results-->
             <div class="oldGuessDispaly">
-                <ol>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>                                         
+                <ol id="list">
+
                 </ol>
             </div>
 
@@ -86,12 +70,12 @@
 
             <div class="buttonsContainer">
 
-            <button data-type="submit" class="story">STORY</button>
-            <button data-type="submit" class="rules">RULES</button>
-            <button data-type="submit" class="hint">HINT</button>
+                <button data-type="submit" class="story">STORY</button>
+                <button data-type="submit" class="rules">RULES</button>
+                <button data-type="submit" class="hint">HINT</button>
 
             </div>
-                        
+
         </div>
     </div>
 

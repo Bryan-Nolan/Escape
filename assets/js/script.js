@@ -94,9 +94,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementsByClassName('inputKey')[11].addEventListener("click", function (event) {
         tryNumber++;
         digitGuess= 0;
-        alert(`Tries: `+tryNumber);
-        alert(`Guess: `+digitGuess1+digitGuess2+digitGuess3+digitGuess4);
-        alert(`Numbers: ` +num1+num2+num3+num4);
         checkGuess(num1, num2, num3, num4, digitGuess1, digitGuess2, digitGuess3, digitGuess4, tryNumber, digitGuess);
     });    
 
@@ -140,14 +137,9 @@ function checkGuess(num1, num2, num3, num4, digitGuess1, digitGuess2, digitGuess
 
     resetResultDisplay ();
     
-
-    alert(`Tries checkGuess: `+tryNumber);
-    alert(`Guess checkGuess: `+digitGuess1+digitGuess2+digitGuess3+digitGuess4);
-    alert(`Number checkGuess: `+num1+num2+num3+num4);
-
     if (num1 == digitGuess1 ) {
-        document.getElementById("result1").value = "O";
-        result1 = "O";
+        document.getElementById("result1").value = "C";
+        result1 = "C";
     } else if ( num1 == digitGuess2 || num1 == digitGuess3 || num1 == digitGuess4) {
         document.getElementById("result1").value = "X";
         result1 = "X";
@@ -157,8 +149,8 @@ function checkGuess(num1, num2, num3, num4, digitGuess1, digitGuess2, digitGuess
     }
     
     if (num2 == digitGuess2) {
-        document.getElementById("result2").value = "O";
-        result2 = "O";
+        document.getElementById("result2").value = "C";
+        result2 = "C";
     } else if ( num2 == digitGuess1 || num2 == digitGuess3 || num2 == digitGuess4) {
         document.getElementById("result2").value = "X";
         result2 = "X";
@@ -168,8 +160,8 @@ function checkGuess(num1, num2, num3, num4, digitGuess1, digitGuess2, digitGuess
     }
     
     if (num3 == digitGuess3) {
-        document.getElementById("result3").value = "O";
-        result3 = "O";
+        document.getElementById("result3").value = "C";
+        result3 = "C";
     } else if ( num3 == digitGuess1 || num3 == digitGuess2 || num3 == digitGuess4) {
         document.getElementById("result3").value = "X";
         result3 = "X";
@@ -179,8 +171,8 @@ function checkGuess(num1, num2, num3, num4, digitGuess1, digitGuess2, digitGuess
     }
     
     if (num4 == digitGuess4) {
-        document.getElementById("result4").value = "O";
-        result4 = "O";
+        document.getElementById("result4").value = "C";
+        result4 = "C";
     } else if ( num4 == digitGuess1 || num4 == digitGuess2 || num4 == digitGuess3) {
         document.getElementById("result4").value = "X";
         result4 = "X";
@@ -215,6 +207,11 @@ function resetResultDisplay () {
 }
 function displayHistroy (digitGuess1, digitGuess2, digitGuess3, digitGuess4, result1, result2, result3, result4, tryNumber) {
 
-    alert(`displayHistroy Guess: `+digitGuess1+digitGuess2+digitGuess3+digitGuess4+` Result: `+result1+result2+result3+result4+` Tries: `+tryNumber);
+    var ol = document. getElementById("list");
+    var li = document. createElement("li");
+    li. appendChild(document. createTextNode( +digitGuess1+result1+digitGuess2+result2+digitGuess3+result3+digitGuess4+result4));
+    ol. appendChild(li);
 
+    alert(`displayHistroy Guess: `+digitGuess1+digitGuess2+digitGuess3+digitGuess4+` Result: `+result1+result2+result3+result4+` Tries: `+tryNumber);
+    
 }

@@ -13,6 +13,8 @@
     margin: auto;
 }
 
+
+
 .game h1 {
     font-family: 7seg;
     color: red;
@@ -21,10 +23,18 @@
     font-size: 200%;
 }
 
-.game h2 {
+#level {
     color: lightgreen;
     margin: 10px auto;
     text-align: center;
+    font-size: 200%;
+}
+
+#triesLeft {
+    color: lightblue;
+    margin: 10px auto;
+    text-align: center;
+    font-size: 200%;
 }
 
 input {
@@ -68,6 +78,7 @@ ol {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start: 15px;
+    color: white;
 }
 
 .keypad {
@@ -102,11 +113,10 @@ ol {
     position: absolute;
     border-radius: 10px;
     padding: 5px;
-    font-size: 12px;
-    background: #d9deff;
+    font-size: 15px;
+    background: black;
     border: 1px solid #353b5e;
     width: 100px;
-
   }
 
   button {
