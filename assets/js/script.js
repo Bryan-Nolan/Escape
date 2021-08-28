@@ -103,29 +103,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /**
- * The main game "loop", called when the script is first loaded
- * to generate the 4 random numbers for the game to commence 
- */
-
-function runGame() {
-
-    let num1 = Math.floor(Math.random() * 10);
-    let num2 = Math.floor(Math.random() * 10);
-    let num3 = Math.floor(Math.random() * 10);
-    let num4 = Math.floor(Math.random() * 10);
-    let tryNumber = 0;
-
-    alert(`Numbers: ` +num1+num2+num3+num4);
-
-}
-
-/**
  * Enters Digits into input boxes as pressed on the keypad
  */
 
 function displayGuess(keyPress, digitGuess) {
-
-    alert(`Digit Guess Number Display` +digitGuess)
 
     if (digitGuess == 1) {
         digitGuess1 = keyPress;
@@ -142,6 +123,7 @@ function displayGuess(keyPress, digitGuess) {
     } else {
         alert(`Too many numbers click restart or done`);
     }    
+
 }
 
 /**
