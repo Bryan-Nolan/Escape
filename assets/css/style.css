@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
 #imageComtainer {
     width: 250px;
     height: 110px;
@@ -11,7 +19,7 @@
     border: 1px solid #353b51;
     width: 800px;
     height: 100%;
-    margin: auto;
+    margin: 10px auto;
 }
 
 #triesLeftDisplay,
@@ -38,23 +46,15 @@ input {
     width: 45%;
 }
 
-.displayGuessArea {
-    margin: 0 10%;
-}
-
+.displayGuessArea,
 .displayResultArea {
-    margin: 0 10%;
+    margin: 2% 20%;
 }
 
-.displayInput {
-    width: 40px;
-    margin: 0 5px;
-    padding: 0;
-    text-align: center;
-}
-
+.displayInput,
 .displayResult {
-    width: 40px;
+    font-family: Orbitron;
+    width: 70px;
     margin: 0 5px;
     padding: 0;
     text-align: center;
@@ -72,6 +72,8 @@ ol {
 }
 
 .keypad {
+    margin-left: 10%;
+    margin-bottom: 10%;
     margin-top: 10px;
     display: inline-block;
     border-radius: 10px;
@@ -79,15 +81,15 @@ ol {
     font-size: 28px;
     background: slategrey;
     border: 1px solid gray;
-    width: 55%;
+    width: auto;
 }
 
 .inputKey {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     margin: 2px;
-    background: midnightblue;
-    box-shadow: 3px 3px slategrey;
+    background: #242526;
+    box-shadow: 3px 3px #3A3B3C;
     color: greenyellow;
     border-radius: 10px;
     display: inline-flex;
@@ -98,12 +100,13 @@ ol {
 }
 
 .oldGuessDispaly {
+    margin-left: 5%;
     margin-top: 10px;
     display: inline-block;
     position: absolute;
     border-radius: 10px;
     padding: 10px;
-    font-size: 15px;
+    font-size: 20px;
     background: black;
 }
 
@@ -116,6 +119,7 @@ ol {
 
 button {
     margin-top: 10px;
+    padding: 5px;
     width: 90px;
     height: 45px;
     font-size: 20px;
@@ -123,7 +127,12 @@ button {
     border: 1px transparent;
     border-radius: 10px;
     display: inline-flex;
+    align-items: center;
     text-align: center;
+}
+
+button:hover{
+    background: #383;
 }
 
 .material-icons {
@@ -137,8 +146,12 @@ button {
 #story,
 #rules {
     color: white;
-    font-size: 120%;
+    font-size: 150%;
     padding: 20px;
+}
+
+#story h1 {
+    text-align: center;
 }
 
 /* for laptop screens size from 780px wide and down */
@@ -157,11 +170,6 @@ button {
         margin: 5px;
     }
 
-
-
-
-
-
 }
 
 /* for tablet screens size from 780px wide and down */
@@ -172,6 +180,7 @@ button {
         width: 480px;
         height: 100%;
         margin: auto;
+
     }
 
     input {
@@ -185,6 +194,25 @@ button {
         height: 70px;
         margin: 5px;
     }
+
+    .displayGuessArea,
+    .displayResultArea {
+        margin: 0 10%;
+    }
+
+    .displayInput,
+    .displayResult {
+        width: 60px;
+    }
+
+    .keypad {
+        margin-left: 10px;        
+    }
+
+    .oldGuessDispaly {
+        margin-left: 10px;
+    }
+
 }
 
 /* for phone screens size from 360px wide and down */
@@ -192,12 +220,12 @@ button {
 @media screen and (max-width: 360px) {
 
     #imageComtainer {
-        margin: 5px auto;
+        margin: 5px 5%;
     }
 
     input {
         margin: 5px auto;
-        font-size: 40px;
+        font-size: 35px;
         width: 45%;
     }
 
@@ -212,10 +240,28 @@ button {
 
     .header p {
         text-align: left;
-        font-size: 120%;
-        width: 125px;
+        font-size: 100%;
+        width: auto;
         margin: 5px 0;
     }
 
+    .header{
+        display: inline-flex;
+    }
 
+    .displayInput,
+    .displayResult {
+        width: 40px;
+    }
+
+    .oldGuessDispaly {
+        margin-left: 0;
+        font-size: 15px;
+    }
+
+    .keypad {
+        margin-left: 0;
+        margin-bottom: 0;
+        
+    }
 }

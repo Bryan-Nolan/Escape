@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     let digitGuess = 0;
     let tryNumber = 0;
-    let triesLeft = 20;
+    let triesLeft = 15;
     let num1 = Math.floor(Math.random() * 10);
     let num2 = Math.floor(Math.random() * 10);
     let num3 = Math.floor(Math.random() * 10);
@@ -216,7 +216,8 @@ function displayHistroy(digitGuess1, digitGuess2, digitGuess3, digitGuess4, resu
     if (result1 == "C " && result2 == "C " && result3 == "C " && result4 == "C ") {
         alert("Well done you have guess the answer in "+tryNumber+" tries");
         location.reload();
-    } else {
-        
+    } else if (triesLeft == 0){
+        alert("Sorry you have run out of tries.\nPlease try again.\nGame will now restart")  
+        location.reload();      
     }
 }
