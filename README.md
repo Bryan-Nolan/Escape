@@ -12,7 +12,7 @@
 7. [Testing](#Testing)
 8. [Deployment](#Deployment)
 9. [Refernces](#Referencess)
-10.[Acknowledgements](#Acknowledgements)
+10. [Acknowledgements](#Acknowledgements)
 ***
 
 
@@ -72,9 +72,19 @@ Good Luck, we need you !
 
 During this project the following languages were used:
 
+### Languages
+
     1. HTML
     2. CSS
     3. Javascript
+
+### Tools 
+    
+    1. Google Fonts
+    2. Font Awesome
+    3. GitPod
+    4. GitHub
+    5. [Am I responsive](http://ami.responsivedesign.is/)
 
 [Back to top ⇧](#)
 
@@ -82,14 +92,21 @@ During this project the following languages were used:
 
 My Testers were my son Cormac (17) and daughter Heather (14). They provided great insight to navigating site and content.
 
-Validator Testing
-HTML
+### Validator Testing
+
+#### HTML
 No errors were returned when passing through the official W3C validator
-CSS
+
+#### CSS
 No errors were found when passing through the official (Jigsaw) validator
-Javascript
+
+##### Javascript
 [Jslint](https://www.jslint.com/)
 No errors just a few warning. 
+
+### Unfixed Bugs
+
+No totally happy with all resoniveness of site but just ran out of time. 
 
 [Back to top ⇧](#)
 
