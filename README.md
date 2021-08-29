@@ -78,14 +78,43 @@ During this project the following languages were used:
 
 [Back to top ⇧](#)
 
+## Testing
+
+My Testers were my son Cormac (17) and daughter Heather (14). They provided great insight to navigating site and content.
+
+Validator Testing
+HTML
+No errors were returned when passing through the official W3C validator
+CSS
+No errors were found when passing through the official (Jigsaw) validator
+Javascript
+[Jslint](https://www.jslint.com/)
+No errors just a few warning. 
+
+[Back to top ⇧](#)
+
+## Deployment
+
+The site was deployed to GitHub pages. The steps to deploy are as follows:
+In the GitHub repository, navigate to the Settings tab
+On this page you will see a table on the left and pages is second row from bottom. Click on this to get to Git Hub Pages
+From the source section drop-down menu, select the Master Branch
+Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+### Escape Site
+
+[Escape](https://bryan-nolan.github.io/Escape/)
+
+[Back to top ⇧](#)
+
 ## References
 
 During the research of this project I used various sites to research issues as I was going along. 
 
-    [W3 Schools] (https://www.w3schools.com/) for reaserch.
-    [PIN Pad Login Screen in JavaScript - HTML, CSS & JavaScript Tutorial (Project)](https://codepen.io/dcode-software/pen/orXrXQ) was used for the intial design and layout for keypad.
-    [Project 09: Crack the Safe](https://codepen.io/finpltf/pen/oRZNzM) for someideas and it is similar project.
-    [Use Code to help with displaying old Guesses] (https://www.codegrepper.com/code-examples/javascript/how+to+append+li+to+ul+in+javascript) for code to help popluate ordered list with old guesses. 
+[W3 Schools] (https://www.w3schools.com/) for reaserch.
+[PIN Pad Login Screen in JavaScript - HTML, CSS & JavaScript Tutorial (Project)](https://codepen.io/dcode-software/pen/orXrXQ) was used for the intial design and layout for keypad.
+[Project 09: Crack the Safe](https://codepen.io/finpltf/pen/oRZNzM) for someideas and it is similar project.
+[Use Code to help with displaying old Guesses] (https://www.codegrepper.com/code-examples/javascript/how+to+append+li+to+ul+in+javascript) for code to help popluate ordered list with old guesses. 
 
 [Back to top ⇧](#)
 
@@ -96,22 +125,3 @@ My mentor Maria who had great insight and guided me in the right direction. My c
 
 [Back to top ⇧](#)
  
-        
-
-
-
-Icons for keys
-https://developers.google.com/fonts/
-
-
-
-Use Code to help with displaying old Guesses
-
-
-##Responsive Site
-In these times of multiple devices accessing websites, I have decided to make my site responsive to the following sizes
-
-Screen Size below 1280 pixels which to me equates to Laptop Screen.
-Screen Size below 768 pixels which to equates to tablet
-Screen Size below 500 pixels to suit large phone.
-Screen Size below 350 pixels to mobile.
