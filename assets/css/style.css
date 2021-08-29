@@ -131,7 +131,7 @@ button {
     text-align: center;
 }
 
-button:hover{
+button:hover {
     background: #383;
 }
 
@@ -206,11 +206,17 @@ button:hover{
     }
 
     .keypad {
-        margin-left: 10px;        
+        margin-left: 10px;
     }
 
     .oldGuessDispaly {
         margin-left: 10px;
+    }
+
+    #story,
+    #rules {
+        font-size: 125%;
+        padding: 5px;
     }
 
 }
@@ -218,6 +224,13 @@ button:hover{
 /* for phone screens size from 360px wide and down */
 
 @media screen and (max-width: 360px) {
+
+    .game {
+        padding: 5px;
+        width: 320px;
+        height: 100%;
+        margin: auto;
+    }
 
     #imageComtainer {
         margin: 5px 5%;
@@ -245,7 +258,7 @@ button:hover{
         margin: 5px 0;
     }
 
-    .header{
+    .header {
         display: inline-flex;
     }
 
@@ -262,6 +275,13 @@ button:hover{
     .keypad {
         margin-left: 0;
         margin-bottom: 0;
-        
+
+    }
+
+    #story,
+    #rules {
+        font-size: 100%;
+        padding: 5px;
+        width: 300px;
     }
 }
