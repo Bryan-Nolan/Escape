@@ -16,15 +16,15 @@
 
 <body>
 
-    <!--Header for Game and Level Number-->
+    <!--Header for Game and Tries Number-->
 
     <div class="game">
-        <p id="title">ESCAPE</p>
-        <div class="header">
 
-            <div id="levelDispaly">
-                <p id="level"></p>
-            </div>
+        <div id="imageComtainer">
+            <img src="./assets/images/Escape-sm.jpg" alt="Escape">
+        </div>
+
+        <div class="header">
             <div>
                 <p id="triesLeftText">Tries Left: </p>
             </div>
@@ -68,6 +68,7 @@
 
             <!--Old Guesses Diplay and Results-->
             <div class="oldGuessDispaly">
+                <p>Guess List</p>
                 <ol id="list">
 
                 </ol>
@@ -77,8 +78,8 @@
 
             <div class="buttonsContainer">
 
-                <button data-type="submit" class="story">STORY</button>
-                <button data-type="submit" class="rules">RULES</button>
+                <button type="button" onclick="window.location.href='story.html'" class="story">STORY</button>
+                <button type="button" onclick="window.location.href='rules.html'" class="rules">RULES</button>
 
             </div>
 
