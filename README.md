@@ -1,5 +1,44 @@
 # Escape
 
+![Main Game](https://github.com/Bryan-Nolan/Escape/blob/main/assets/readme-images/mobiless.jpg)
+
+## Table of contents
+1. [Introduction](#Introduction)
+2. [User](#User)
+3. [The Story](#The-Story)
+    1. [Design Features](#Design-Features) 
+    2. [Existing Features](#Existing-Features)
+    3. [Features to Implement in the future](#Features-to-Implement-in-the-future)
+4. [Issues and Bugs](#Issues-and-Bugs)
+5. [Technologies Used](#Technologies-Used)
+    1. [Main Languages Used](#Main-Languages-Used)
+    3. [Frameworks, Libraries & Programs Used](#Frameworks,-Libraries-&-Programs-Used)
+6. [Testing](#Testing)
+    1. [Testing User Stories](#Testing-User-Stories)
+    2. [Manual Testing](#Manual-Testing)
+    3. [Automated Testing](#Automated-Testing) 
+        - [Code Validation](#Code-Validation)
+        - [Browser Validation](#Browser-Validation)
+    4. [User Testing](#User-Testing)
+7. [Deployment](#Deployment)
+    1. [Deploying on GitHub Pages](#Deploying-on-GitHub-Pages)
+8. [Credits](#Credits)
+    1. [Content](#Content)
+    2. [Media](#Media)
+    3. [Code](#Code)
+9. [Acknowledgements](#Acknowledgements)
+***
+
+
+## Escape - The Game
+    
+    Escape is a puzzle game.  It is a logical game wher the user will use clues to be able to guess the code correctly. 
+
+## User
+
+    The target for this game is a quick puzzle game which would appeal to users who like using logical thinking and a compedative nature to try and beat old scores.
+    It i sdesigned with mobile and tablet users 
+
 ## The Story
 
     You are a prisoner wrongfully convicted by a corrupt government. A fall guy to protect more powerful people.
@@ -8,6 +47,8 @@
     You find yourself in a corridor with a keypad door. Beyond this door is freedom and saving the world.
     All you have to do is crack the code. No pressure the fate of the world depends on you.
     Good Luck, we need you !
+
+    [Back to top ⇧](#)
 
 
 ## The Rules
